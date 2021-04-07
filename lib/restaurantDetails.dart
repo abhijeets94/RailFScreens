@@ -33,7 +33,7 @@ class _RestaurantDetailsFilledState extends State<RestaurantDetailsFilled> {
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),
             title: Text("MyRestaurant"),
-            backgroundColor: Colors.black,
+            backgroundColor: Color(0xff181820),
             actions: [
               Padding(
                 padding: const EdgeInsets.all(13.0),
@@ -62,7 +62,7 @@ class _RestaurantDetailsFilledState extends State<RestaurantDetailsFilled> {
           ),
         ),
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xff181820),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -361,6 +361,7 @@ class _RestaurantDetailsFilledState extends State<RestaurantDetailsFilled> {
                 children: [
                   OrderInfo(
                     userTag: "Order Before Timing (Retail Order)",
+                    userDetail: "",
                   )
                 ],
               ),
