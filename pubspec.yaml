@@ -22,6 +22,8 @@ environment:
 
 dependencies:
   flutter_switch: ^0.3.0
+  grouped_buttons: ^1.0.4
+  group_button: ^2.1.0
   flutter:
     sdk: flutter
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:railscreen/myRestaurants.dart';
+import 'package:railscreen/popUpWhenOff.dart';
 import 'package:railscreen/restaurantDetails.dart';
 
 class Navigation extends StatefulWidget {
@@ -38,7 +39,19 @@ class _NavigationState extends State<Navigation> {
                     );
                   },
                 ),
-              )
+              ),
+              Container(
+                child: ElevatedButton(
+                  child: Text("Pop Up when restaurant turned off"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PopUpWhenOff()),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
