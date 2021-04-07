@@ -357,12 +357,81 @@ class _RestaurantDetailsFilledState extends State<RestaurantDetailsFilled> {
             ),
             MyRestaurantHeader("Timing & Other Details"),
             Container(
+              margin: EdgeInsets.all(15.0),
               child: Column(
                 children: [
                   OrderInfo(
                     userTag: "Order Before Timing (Retail Order)",
                     userDetail: "",
-                  )
+                  ),
+                  OrderInfo(
+                    userTag: "Order Before Timing (Bulk Order)",
+                    userDetail: "",
+                  ),
+                  Stack(
+                    children: [
+                      OrderInfo(
+                        userTag: "Preparation time required for OD value",
+                        userDetail: "",
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 20.0, top: 35.0),
+                        child: Text(
+                          "(2000-5000)",
+                          style: const TextStyle(
+                              color: const Color(0xff3a9f7b),
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Roboto",
+                              fontStyle: FontStyle.normal,
+                              fontSize: 8.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      OrderInfo(
+                        userTag: "Preparation time required for OD value",
+                        userDetail: "",
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 20.0, top: 35.0),
+                        child: Text(
+                          "(5000-10000 & above)",
+                          style: const TextStyle(
+                              color: const Color(0xff3a9f7b),
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Roboto",
+                              fontStyle: FontStyle.normal,
+                              fontSize: 8.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                  OrderInfo(
+                    userTag: "Delivery Timings",
+                    userDetail: "",
+                  ),
+                  OrderInfo(
+                    userTag: "Break Time",
+                    userDetail: "",
+                  ),
+                  OrderInfo(
+                    userTag: "Week Off days",
+                    userDetail: "",
+                  ),
+                  OrderInfo(
+                    userTag: "Delivery Charges",
+                    userDetail: "",
+                  ),
+                  OrderInfo(
+                    userTag: "Daily order handling capacity(in Rs)",
+                    userDetail: "",
+                  ),
+                  OrderInfo(
+                    userTag: "Hourly order handling capacity(in Rs)",
+                    userDetail: "",
+                  ),
                 ],
               ),
             ),
