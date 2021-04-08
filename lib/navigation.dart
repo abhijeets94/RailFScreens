@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:railscreen/myRestaurants.dart';
 import 'package:railscreen/popUpWhenOff.dart';
 import 'package:railscreen/restaurantDetails.dart';
+import 'package:railscreen/schedulePopUp.dart';
 
 class Navigation extends StatefulWidget {
   @override
@@ -46,8 +47,18 @@ class _NavigationState extends State<Navigation> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => PopUpWhenOff()),
+                      MaterialPageRoute(builder: (context) => PopUpWhenOff()),
+                    );
+                  },
+                ),
+              ),
+              Container(
+                child: ElevatedButton(
+                  child: Text("Schedule an off advance"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SchedulePopUp()),
                     );
                   },
                 ),

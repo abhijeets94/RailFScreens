@@ -48,10 +48,16 @@ class _PopUpWhenOffState extends State<PopUpWhenOff> {
                                     "Go-online after",
                                     style: TextStyle(color: Colors.white),
                                   ),
-                                  Image.asset(
-                                    'assets/images/close.png',
-                                    scale: 4.0,
-                                    color: Color(0xff807c96),
+                                  GestureDetector(
+                                    child: Image.asset(
+                                      'assets/images/close.png',
+                                      scale: 4.0,
+                                      color: Color(0xff807c96),
+                                    ),
+                                    onTap: () {
+                                      Navigator.of(context, rootNavigator: true)
+                                          .pop('dialog');
+                                    },
                                   ),
                                 ],
                               ),
@@ -110,7 +116,7 @@ class _PopUpWhenOffState extends State<PopUpWhenOff> {
                                 hint: Container(
                                   margin: EdgeInsets.all(15.0),
                                   child: Text(
-                                    "  $_chosenValue                           ",
+                                    "  $_chosenValue                       ",
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 16,
