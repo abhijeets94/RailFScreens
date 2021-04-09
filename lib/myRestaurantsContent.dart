@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:railscreen/restaurantDetails.dart';
 
 class MyRestaurantContent extends StatefulWidget {
   @override
@@ -16,7 +17,10 @@ class _MyRestaurantContentState extends State<MyRestaurantContent> {
             caterers: "Spice India Caterers",
             station: "Patna Jn",
             onTap: () {
-              print("1696 clicked");
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => RestaurantDetailsFilled()));
             },
           ),
           OutletList(
@@ -60,7 +64,11 @@ class OutletList extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Container(
-        margin: EdgeInsets.only(left: 17.0, top: 17.0),
+        margin: EdgeInsets.only(
+          left: 17.0,
+          top: 17.0,
+          bottom: 17.0,
+        ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -72,15 +80,16 @@ class OutletList extends StatelessWidget {
               ),
               child: Image.asset(
                 'assets/images/myRest.png',
-                scale: 3,
+                scale: 3.8,
                 fit: BoxFit.fill,
               ),
             ),
             //store id, name etc
             Container(
-              margin: EdgeInsets.all(20.0),
+              margin: EdgeInsets.only(left: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
                     child: Text(

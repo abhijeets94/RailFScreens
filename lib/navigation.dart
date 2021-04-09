@@ -4,6 +4,8 @@ import 'package:railscreen/popUpWhenOff.dart';
 import 'package:railscreen/restaurantDetails.dart';
 import 'package:railscreen/schedulePopUp.dart';
 
+import 'myMenu.dart';
+
 class Navigation extends StatefulWidget {
   @override
   _NavigationState createState() => _NavigationState();
@@ -31,18 +33,6 @@ class _NavigationState extends State<Navigation> {
               ),
               Container(
                 child: ElevatedButton(
-                  child: Text("Restaurant Details Filled"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RestaurantDetailsFilled()),
-                    );
-                  },
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
                   child: Text("Pop Up when restaurant turned off"),
                   onPressed: () {
                     Navigator.push(
@@ -59,6 +49,17 @@ class _NavigationState extends State<Navigation> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => SchedulePopUp()),
+                    );
+                  },
+                ),
+              ),
+              Container(
+                child: ElevatedButton(
+                  child: Text("My Menu"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyMenu()),
                     );
                   },
                 ),

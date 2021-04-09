@@ -44,10 +44,10 @@ class _RestaurantDetailsFilledState extends State<RestaurantDetailsFilled> {
                   width: 60.0,
                   height: 36.0,
                   valueFontSize: 10.0,
-                  toggleSize: 17.0,
+                  toggleSize: 18.0,
                   value: status,
-                  borderRadius: 30.0,
-                  padding: 8.0,
+                  borderRadius: 4.0,
+                  padding: 3.0,
                   onToggle: (val) {
                     setState(() {
                       status = val;

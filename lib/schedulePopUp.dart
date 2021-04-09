@@ -193,7 +193,7 @@ class _SchedulePopUpState extends State<SchedulePopUp> {
         backgroundColor: Color(0xff181820),
         body: Container(
           child: ElevatedButton(
-            child: Text("Menu-Filter"),
+            child: Text("Go Online After"),
             style: ButtonStyle(
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(

@@ -86,48 +86,58 @@ class _PopUpWhenOffState extends State<PopUpWhenOff> {
                                   border: Border.all(color: Color(0xff807c96)),
                                   borderRadius: BorderRadius.circular(12.0)),
                               margin: const EdgeInsets.all(5.0),
-                              child: DropdownButton<String>(
-                                value: _chosenValue,
-                                dropdownColor: Color(0xff21212b),
-                                //elevation: 5,
-                                style: TextStyle(
-                                  color: Color(0xffc2c2c0),
-                                ),
-                                focusColor: Color(0xff21212b),
-                                items: <String>[
-                                  'Select Reason',
-                                  'Festival',
-                                  'Account Issue',
-                                  'Electricity Issue',
-                                  'Manpower Issue',
-                                  'Personal Reasons',
-                                  'Due to Emergency',
-                                  'Maintainence Work',
-                                  'Reasons Not Listed',
-                                ].map<DropdownMenuItem<String>>((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Container(
-                                      margin: EdgeInsets.all(12.0),
-                                      child: Text(value),
-                                    ),
-                                  );
-                                }).toList(),
-                                hint: Container(
-                                  margin: EdgeInsets.all(15.0),
-                                  child: Text(
-                                    "  $_chosenValue                       ",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.amber)),
+                                child: DropdownButton<String>(
+                                  value: _chosenValue,
+                                  dropdownColor: Color(0xff21212b),
+                                  //elevation: 5,
+                                  style: TextStyle(
+                                    color: Color(0xffc2c2c0),
                                   ),
+                                  focusColor: Color(0xff21212b),
+                                  items: <String>[
+                                    'Select Reason',
+                                    'Festival',
+                                    'Account Issue',
+                                    'Electricity Issue',
+                                    'Manpower Issue',
+                                    'Personal Reasons',
+                                    'Due to Emergency',
+                                    'Maintainence Work',
+                                    'Reasons Not Listed',
+                                  ].map<DropdownMenuItem<String>>(
+                                      (String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Container(
+                                        margin: EdgeInsets.all(12.0),
+                                        child: Text(value),
+                                      ),
+                                    );
+                                  }).toList(),
+                                  hint: Container(
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Color(0xff807c96)),
+                                        borderRadius:
+                                            BorderRadius.circular(12.0)),
+                                    margin: EdgeInsets.all(15.0),
+                                    child: Text(
+                                      "  $_chosenValue                       ",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                  onChanged: (String value) {
+                                    setState(() {
+                                      _chosenValue = value;
+                                    });
+                                  },
                                 ),
-                                onChanged: (String value) {
-                                  setState(() {
-                                    _chosenValue = value;
-                                  });
-                                },
                               ),
                             ),
                           ],
